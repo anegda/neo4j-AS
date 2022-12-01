@@ -1,0 +1,22 @@
+<html>
+    <head>
+	<title>MONITORIZACION DE LOGS Y BDS</title>
+	<link rel="stylesheet" href="estilo.css">
+    </head>
+    <body style="background-color:lightyellow;">
+	<h1>BIENVENIDO A LA PAGINA DE MONITORIZACION DE NUESTROS DOS CONTENEDORES</h1>
+	<h2>QUERYS DE NUESTRO CLIENTE PYTHON:</h2>
+	<p>Podemos ver en el siguiente campo las querys realizadas por nuestro cliente a lo largo de la historia:</p>
+	<div style="width:1000px"><object data ="querys.txt"></object></div>
+
+        
+        <h2>DESCARGAR LOGS DE NUESTRA BD</h2>
+	<p><a href="querys.txt" download> Descarga el log de querys de nuestro Cliente </a></p>
+	<p><a href="logs/neo4j.log" download> Descarga el log general de Neo4j </a></p>
+	<p><a href="logs/debug.log" download> Descarga el log de debugs de Neo4j </a></p>
+	<p><a href="logs/http.log" download> Descarga el log de http de Neo4j </a></p>
+
+	<h2>IR AL WEB BROWSER</h2>
+	<p><a href="http://34.88.11.228:7474/browser/">Pulsa este link si quieres acceder al web-browser</a></p>
+     </body>
+</html>
