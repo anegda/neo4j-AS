@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cliente-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: cliente
+  template:
+    metadata:
+      labels:
+        component: cliente
+  spec:
+    containers:
+    - name: mi-pod-cliente
+      image: anegda/cliente-neo4j:neo4j
