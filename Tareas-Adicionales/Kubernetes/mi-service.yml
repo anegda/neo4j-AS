@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mi-load-balancer
+  name: mi-service
   labels:
     component: bd
 spec:
-  type: LoadBalancer
+  selector:
+    component: bd
+  type: ClusterIP
   ports:
   - name: http
     protocol: TCP
@@ -15,9 +17,3 @@ spec:
     protocol: TCP
     port: 7687
     targetPort: 7687
-  selector:
-    component: bd
-status:
-  loadBalancer:
-    ingress:
-      - ip: 192.0.2.127
