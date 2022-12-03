@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         component: cliente
-  spec:
-    containers:
-    - name: mi-pod-cliente
-      image: anegda/cliente-kubernetes-neo4j
+    spec:
+      containers:
+      - name: mi-pod-cliente
+        image: anegda/cliente-kubernetes-neo4j

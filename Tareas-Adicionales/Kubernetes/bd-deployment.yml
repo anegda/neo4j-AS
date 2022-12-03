@@ -15,6 +15,9 @@ spec:
       containers:
       - name: mi-pod-bd
         image: neo4j
+        env:
+          - name: NEO4J_AUTH
+            value: "neo4j/s3cr3t"
         ports:
         - containerPort: 7474
         - containerPort: 7687
