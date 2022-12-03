@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: cliente
+      component: bd
   template:
     metadata:
       labels:
-        component: cliente
+        component: bd
   spec:
     containers:
     - name: mi-pod-cliente
