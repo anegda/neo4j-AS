@@ -11,12 +11,10 @@ spec:
     metadata:
       labels:
         component: bd
-  spec:
-    containers:
-    - name: mi-pod-bd
-      image: neo4j
-      ports:
-        - port: 7474
-          targetPort: 7474
-        - port: 7687
-          targetPort: 7687
+    spec:
+      containers:
+      - name: mi-pod-bd
+        image: neo4j
+        ports:
+        - containerPort: 7474
+        - containerPort: 7687
