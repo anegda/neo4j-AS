@@ -14,4 +14,4 @@ spec:
   spec:
     containers:
     - name: mi-pod-cliente
-      image: anegda/cliente-neo4j:neo4j
+      image: anegda/cliente-kubernetes-neo4j

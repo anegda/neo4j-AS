@@ -13,7 +13,7 @@ class neo4jApp:
 		return response
 
 if __name__ == "__main__":
-	app = neo4jApp("bolt://34.88.11.228:7687", "neo4j", "s3cr3t")
+	app = neo4jApp("bolt://10.96.0.100:7687", "neo4j", "s3cr3t")
 	app.query("CREATE (n:Persona {nombre: 'Ane', apellido: 'García'})")
 
 	app.query("CREATE (n:Persona {nombre: 'Kubernetes', apellido: 'Kubernetes'})")
