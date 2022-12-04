@@ -12,6 +12,10 @@ spec:
       labels:
         component: bd
     spec:
+      volumes:
+        - name: neo4j-data
+          persistentVolumeClaim:
+            claimName: mi-reclamacion-vp
       containers:
       - name: mi-pod-bd
         image: neo4j
@@ -22,8 +26,5 @@ spec:
         - containerPort: 7474
         - containerPort: 7687
         volumeMounts:
-        - mountPath: /data
-          name: data-volume
-      volumes:
-        - name: data-volume
-          emptyDir: {}
+        - name: neo4j-data
+          mountPath: /data
