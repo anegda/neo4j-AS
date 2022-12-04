@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bd-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: bd
+  template:
+    metadata:
+      labels:
+        component: bd
+    spec:
+      containers:
+      - name: mi-pod-bd
+        image: neo4j
+        env:
+          - name: NEO4J_AUTH
+            value: "neo4j/s3cr3t"
+        ports:
+        - containerPort: 7474
+        - containerPort: 7687
+        volumeMounts:
+        - mountPath: /data
+          name: data-volume
+      volumes:
+        - name: data-volume
+          emptyDir: {}
